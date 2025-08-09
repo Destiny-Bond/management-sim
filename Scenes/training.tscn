@@ -1,0 +1,265 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2m25tmjrgadf"]
+
+[ext_resource type="Script" uid="uid://dkn5mmn6lqwpy" path="res://Scripts/TrainingScreen.cs" id="1_1ydqc"]
+[ext_resource type="Texture2D" uid="uid://db0q4ohud2tlk" path="res://art/Backgrounds/Training.png" id="2_mpd5x"]
+[ext_resource type="Texture2D" uid="uid://6g2r4a8huk1w" path="res://art/portraits/2B.png" id="2_urnhv"]
+[ext_resource type="Script" uid="uid://bwhs4n7yuj2oi" path="res://Scripts/Player.cs" id="3_urnhv"]
+
+[node name="Training" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ydqc")
+PlayerPath = NodePath("Player")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+modulate = Color(0.728822, 0.728822, 0.728822, 1)
+z_index = -100
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource("2_mpd5x")
+stretch_mode = 6
+
+[node name="Info" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -53.5
+offset_bottom = 53.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="Info"]
+layout_mode = 2
+
+[node name="ProfessionLabel" type="Label" parent="Info"]
+layout_mode = 2
+text = "
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Info"]
+layout_mode = 2
+
+[node name="PlayerEnergyBar" type="ProgressBar" parent="Info/HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="Player Energy" type="Label" parent="Info/HBoxContainer"]
+layout_mode = 2
+
+[node name="PortraitImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -512.0
+offset_top = -1024.0
+offset_right = 512.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_urnhv")
+stretch_mode = 3
+
+[node name="SkillBars" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -134.5
+offset_right = 405.0
+offset_bottom = 134.5
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SkillBars"]
+layout_mode = 2
+
+[node name="Softcore" type="Label" parent="SkillBars/HBoxContainer"]
+layout_mode = 2
+
+[node name="softcore_bar" type="ProgressBar" parent="SkillBars/HBoxContainer"]
+custom_minimum_size = Vector2(400, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="SkillBars"]
+layout_mode = 2
+
+[node name="Nude" type="Label" parent="SkillBars/HBoxContainer7"]
+layout_mode = 2
+
+[node name="nude_bar" type="ProgressBar" parent="SkillBars/HBoxContainer7"]
+custom_minimum_size = Vector2(400, 35)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SkillBars"]
+layout_mode = 2
+
+[node name="Foreplay" type="Label" parent="SkillBars/HBoxContainer2"]
+layout_mode = 2
+
+[node name="foreplay_bar" type="ProgressBar" parent="SkillBars/HBoxContainer2"]
+custom_minimum_size = Vector2(400, 35)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="SkillBars"]
+layout_mode = 2
+
+[node name="Mouth" type="Label" parent="SkillBars/HBoxContainer3"]
+layout_mode = 2
+
+[node name="mouth_bar" type="ProgressBar" parent="SkillBars/HBoxContainer3"]
+custom_minimum_size = Vector2(400, 35)
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="SkillBars"]
+layout_mode = 2
+
+[node name="Sex" type="Label" parent="SkillBars/HBoxContainer4"]
+layout_mode = 2
+
+[node name="sex_bar" type="ProgressBar" parent="SkillBars/HBoxContainer4"]
+custom_minimum_size = Vector2(400, 35)
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="SkillBars"]
+layout_mode = 2
+
+[node name="Anal" type="Label" parent="SkillBars/HBoxContainer5"]
+layout_mode = 2
+
+[node name="anal_bar" type="ProgressBar" parent="SkillBars/HBoxContainer5"]
+custom_minimum_size = Vector2(400, 35)
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="SkillBars"]
+layout_mode = 2
+
+[node name="Fetish" type="Label" parent="SkillBars/HBoxContainer6"]
+layout_mode = 2
+
+[node name="fetish_bar" type="ProgressBar" parent="SkillBars/HBoxContainer6"]
+custom_minimum_size = Vector2(400, 35)
+layout_mode = 2
+
+[node name="TrainingButtons" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -712.0
+offset_right = 712.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="TrainSoftcoreButton" type="Button" parent="TrainingButtons"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 20
+text = "Softcore
+"
+
+[node name="TrainNudeButton" type="Button" parent="TrainingButtons"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 20
+text = "Nude"
+
+[node name="TrainForeplayButton" type="Button" parent="TrainingButtons"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 20
+text = "Foreplay"
+
+[node name="TrainMouthButton" type="Button" parent="TrainingButtons"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 20
+text = "Mouth"
+
+[node name="TrainSexButton" type="Button" parent="TrainingButtons"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 20
+text = "Sex
+"
+
+[node name="TrainAnalButton" type="Button" parent="TrainingButtons"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 20
+text = "Anal"
+
+[node name="TrainFetishButton" type="Button" parent="TrainingButtons"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 20
+text = "Fetish"
+
+[node name="TrainingLog" type="Label" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 164.0
+offset_right = 85.0
+offset_bottom = 187.0
+
+[node name="TrainingOverlay" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="TrainingOverlay"]
+z_index = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0)
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("3_urnhv")
+
+[node name="ProceedToWorkButton" type="Button" parent="."]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -291.0
+offset_top = -118.0
+offset_right = -41.0
+offset_bottom = -38.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Finish Training"

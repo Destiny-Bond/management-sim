@@ -1,0 +1,126 @@
+[gd_scene load_steps=4 format=3 uid="uid://g2a35bjps1qt"]
+
+[ext_resource type="Script" uid="uid://cnam6x5awltk1" path="res://Scripts/ProstitutionScreen.cs" id="1_0fou0"]
+[ext_resource type="Script" uid="uid://k0ffltijo3nk" path="res://Scripts/RoomPanel.cs" id="2_bqk16"]
+[ext_resource type="Script" uid="uid://dugkqlxwho408" path="res://Scripts/ProstituteCard.cs" id="3_3wgay"]
+
+[node name="ProstitutionScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fou0")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HUD" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MoneyLabel" type="Label" parent="HUD"]
+layout_mode = 2
+
+[node name="Rooms" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 3
+
+[node name="Room1" type="Control" parent="Rooms"]
+layout_mode = 2
+script = ExtResource("2_bqk16")
+
+[node name="Panel" type="Panel" parent="Rooms/Room1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Rooms/Room1/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SkillImage" type="TextureRect" parent="Rooms/Room1/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TimerLabel" type="Label" parent="Rooms/Room1/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="EnergyBar" type="ProgressBar" parent="Rooms/Room1/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Room2" type="Control" parent="Rooms"]
+layout_mode = 2
+script = ExtResource("2_bqk16")
+
+[node name="Panel" type="Panel" parent="Rooms/Room2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Rooms/Room2/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SkillImage" type="TextureRect" parent="Rooms/Room2/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TimerLabel" type="Label" parent="Rooms/Room2/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="EnergyBar" type="ProgressBar" parent="Rooms/Room2/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Room3" type="Control" parent="Rooms"]
+layout_mode = 2
+script = ExtResource("2_bqk16")
+
+[node name="Panel" type="Panel" parent="Rooms/Room3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Rooms/Room3/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SkillImage" type="TextureRect" parent="Rooms/Room3/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TimerLabel" type="Label" parent="Rooms/Room3/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="EnergyBar" type="ProgressBar" parent="Rooms/Room3/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Prostitutes" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_default_cursor_shape = 6
+
+[node name="Card_2B" type="Control" parent="Prostitutes"]
+layout_mode = 2
+script = ExtResource("3_3wgay")
+
+[node name="Portrait" type="TextureRect" parent="Prostitutes/Card_2B"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Name" type="Label" parent="Prostitutes/Card_2B"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CustomerSpawnTimer" type="Timer" parent="."]
+
+[node name="SceneTimer" type="Timer" parent="."]
